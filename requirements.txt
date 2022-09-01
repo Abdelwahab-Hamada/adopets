@@ -1,7 +1,7 @@
 aiohttp==3.8.1
 aiosignal==1.2.0
 aniso8601==7.0.0
-asgi-redis
+channels-redis
 asgiref
 async-timeout==4.0.2
 attrs==22.1.0
