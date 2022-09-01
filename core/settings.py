@@ -147,6 +147,7 @@ CORS_ALLOWED_ORIGINS = [
 
 CSRF_TRUSTED_ORIGINS = [
     'https://abdelwahabyoussef.github.io',
+    'https://app-adopets.herokuapp.com/'
 ]
 
 CORS_ALLOW_CREDENTIALS = True
