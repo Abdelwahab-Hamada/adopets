@@ -8,7 +8,7 @@ from dj_static import Cling
 
 
 
-application = Cling(ProtocolTypeRouter({
+application = (ProtocolTypeRouter({
     "http": get_asgi_application(),
     "websocket": TokenAuthMiddleware(URLRouter([
         path("pets/", Consumer.as_asgi()),
