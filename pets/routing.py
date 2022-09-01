@@ -1,5 +1,4 @@
 from django.core.asgi import get_asgi_application
-from django.core.wsgi import get_wsgi_application
 from channels.routing import ProtocolTypeRouter,URLRouter
 from django.urls import path
 from .tokenAuthMiddleware import TokenAuthMiddleware
@@ -7,11 +6,11 @@ from .consumers import Consumer
 from dj_static import Cling
 
 
-django_asgi_app = Cling(get_wsgi_application())
 
-application = ProtocolTypeRouter({
-    "http": django_asgi_app,
+
+application = Cling(ProtocolTypeRouter({
+    "http": get_asgi_application(),
     "websocket": TokenAuthMiddleware(URLRouter([
         path("pets/", Consumer.as_asgi()),
     ]))
-})
+}))
