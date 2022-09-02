@@ -105,7 +105,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 MEDIA_ROOT= os.path.join(BASE_DIR,'media')
-STATIC_ROOT = os.path.join(BASE_DIR, 'statics')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'statics')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -174,5 +174,5 @@ CLOUDINARY_STORAGE = {
 }
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / "statics",
 ]
