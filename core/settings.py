@@ -174,5 +174,5 @@ CLOUDINARY_STORAGE = {
 }
 
 STATICFILES_DIRS = [
-    BASE_DIR / "statics",
+    BASE_DIR / "static",
 ]
