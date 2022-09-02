@@ -14,13 +14,16 @@ class Query(graphene.ObjectType):
     owner_pets=graphene.List(PetType)
     notifications=graphene.List(NotificationType)
 
+    @login_required
     def resolve_pets(root,info):
         return Pet.objects.all()
 
+    @login_required
     def resolve_owner_pets(root,info):
         owner=info.context.user
         return owner.pets.all()
     
+    @login_required
     def resolve_notifications(root,info):
         user=info.context.user
         return user.recieved_notifs.all()
