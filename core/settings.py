@@ -26,8 +26,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     'cloudinary_storage',
+    'django.contrib.staticfiles',
     'cloudinary',
 ]
 
@@ -98,13 +98,13 @@ USE_I18N = True
 USE_TZ = True
 
 
-STATIC_URL = '/static/'
-MEDIA_URL = 'media/'
-
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+STATIC_URL = 'static/'
+STATIC_ROOT= os.path.join(BASE_DIR,'static')
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
+MEDIA_URL = 'media/'
 MEDIA_ROOT= os.path.join(BASE_DIR,'media')
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -171,6 +171,5 @@ CLOUDINARY_STORAGE = {
     'CLOUD_NAME': config('CLOUD_NAME'),
     'API_KEY': config('API_KEY'),
     'API_SECRET': config('API_SECRET'),
-    'STATICFILES_MANIFEST_ROOT': os.path.join(BASE_DIR, 'manifest'),
 }
 
