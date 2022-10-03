@@ -12,7 +12,9 @@ class Consumer(channels_graphql_ws.GraphqlWsConsumer):
     # strict_ordering = True
 
     async def on_connect(self, payload):
-        # You can `raise` from here to reject the connection.
+        if not self.scope['user'].is_authenticated:
+            #this exception to reject nonlogged clients
+            raise Exception("login first")
         print("New client connected!")
         
 
