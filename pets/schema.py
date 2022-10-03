@@ -14,7 +14,6 @@ class Query(graphene.ObjectType):
     owner_pets=graphene.List(PetType)
     notifications=graphene.List(NotificationType)
 
-    @login_required
     def resolve_pets(root,info):
         return Pet.objects.all()
 
