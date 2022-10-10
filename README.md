@@ -1,5 +1,5 @@
 ![Logo](https://abdelwahab-hamada.github.io/adopets-app/logo192.png)
-# Adopets ![Application ](https://abdelwahab-hamada.github.io/adopets-app/)
+# Adopets [Application ](https://abdelwahab-hamada.github.io/adopets-app/)
 
 an app for adopting pets
 
