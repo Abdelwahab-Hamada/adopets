@@ -1,5 +1,5 @@
 ![Logo](https://abdelwahab-hamada.github.io/adopets-app/logo192.png)
-# [Adopets](https://abdelwahab-hamada.github.io/adopets-app/)(fullstack app's link)
+# [Adopets](https://abdelwahab-hamada.github.io/adopets-app/) (fullstack app's link)
 
 an app for adopting pets
 
