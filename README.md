@@ -1,5 +1,5 @@
 ![Logo](https://abdelwahab-hamada.github.io/adopets-app/logo192.png)
-## an app for adopting pets
+# an app for adopting pets
 #### 🔗 [Adopets fullstack app link](https://abdelwahab-hamada.github.io/adopets-app/)
 
 ## Technologies 
