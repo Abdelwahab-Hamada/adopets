@@ -15,7 +15,7 @@ SECRET_KEY = config('SK')
 DEBUG = config('DEBUG')
 
 ALLOWED_HOSTS = [
-    'app-adopets.herokuapp.com',
+    config('HOST'),
     '127.0.0.1',
     'localhost',
 ]
@@ -129,7 +129,7 @@ CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = [
     'https://abdelwahab-hamada.github.io',
-    'https://app-adopets.herokuapp.com',
+    f'https://{config("HOST")}',
 ]
 
 CSRF_COOKIE_SECURE= True
